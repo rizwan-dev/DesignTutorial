@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyFirstProject</string>
+    <string name="enter_your_address">Enter your address</string>
+    <string name="enter_your_name">Enter your first name</string>
+</resources>
