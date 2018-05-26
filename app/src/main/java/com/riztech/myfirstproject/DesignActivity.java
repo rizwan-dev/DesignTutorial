@@ -4,10 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class DesignActivity extends AppCompatActivity {
@@ -40,6 +42,13 @@ public class DesignActivity extends AppCompatActivity {
         chbGraduation = findViewById(R.id.chb_graduation);
         chbPG = findViewById(R.id.chb_pg);
         btnSend = findViewById(R.id.btn_send);
+
+        final Spinner spnCountry = findViewById(R.id.spn_country);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,countries);
+
+        spnCountry.setAdapter(adapter);
+
 
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,13 +108,17 @@ public class DesignActivity extends AppCompatActivity {
 
                 if(TextUtils.isEmpty(education)){
                     showToast("Please select your education");
+                    return;
                 }
+
+                String country = (String) spnCountry.getSelectedItem();
 
                 StringBuilder messageBuilder = new StringBuilder();
 
                 messageBuilder.append("Name : ").append(name).append(NEXT)
                         .append("Address : ").append(address).append(NEXT)
                         .append("Gender : ").append(gender).append(NEXT)
+                        .append("Country : ").append(country)
                         .append("Education : ").append(education);
 
                 showToast(messageBuilder.toString());
