@@ -1,5 +1,6 @@
 package com.riztech.myfirstproject;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -113,16 +114,23 @@ public class DesignActivity extends AppCompatActivity {
 
                 String country = (String) spnCountry.getSelectedItem();
 
-                StringBuilder messageBuilder = new StringBuilder();
+              /*  StringBuilder messageBuilder = new StringBuilder();
 
                 messageBuilder.append("Name : ").append(name).append(NEXT)
                         .append("Address : ").append(address).append(NEXT)
                         .append("Gender : ").append(gender).append(NEXT)
-                        .append("Country : ").append(country)
+                        .append("Country : ").append(country).append(NEXT)
                         .append("Education : ").append(education);
 
-                showToast(messageBuilder.toString());
+                showToast(messageBuilder.toString());*/
 
+                Intent intent = new Intent(DesignActivity.this, SecondActivity.class);
+                intent.putExtra(IntentExtra.NAME, name);
+                intent.putExtra(IntentExtra.ADDRESS, address);
+                intent.putExtra(IntentExtra.GENDER, gender);
+                intent.putExtra(IntentExtra.COUNTRY, country);
+                intent.putExtra(IntentExtra.EDUCATION, education);
+                startActivity(intent);
 
             }
         });

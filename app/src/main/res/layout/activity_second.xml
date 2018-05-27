@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    android:padding="20dp"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/lbl_name"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="18sp" />
+
+    <!--text-->
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lbl_name"
+        android:layout_toRightOf="@+id/lbl_name"
+        android:text="Dummy Name"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/lbl_address"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_name"
+        android:layout_marginTop="15dp"
+        android:text="Address"
+        android:textSize="18sp" />
+
+    <!--text-->
+    <TextView
+        android:id="@+id/txt_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lbl_address"
+        android:layout_toRightOf="@+id/lbl_address"
+        android:text="Dummy Adress"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/lbl_gender"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_address"
+        android:layout_marginTop="15dp"
+        android:text="Gender"
+        android:textSize="18sp" />
+
+    <!--text-->
+    <TextView
+        android:id="@+id/txt_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lbl_gender"
+        android:layout_toRightOf="@+id/lbl_gender"
+        android:text="Dummy Gender"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/lbl_country"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_gender"
+        android:layout_marginTop="15dp"
+        android:text="Country"
+        android:textSize="18sp" />
+
+    <!--text-->
+    <TextView
+        android:id="@+id/txt_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lbl_country"
+        android:layout_toRightOf="@+id/lbl_country"
+        android:text="Dummy Country"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/lbl_education"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_country"
+        android:layout_marginTop="15dp"
+        android:text="Education"
+        android:textSize="18sp" />
+
+    <!--text-->
+    <TextView
+        android:id="@+id/txt_education"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lbl_education"
+        android:layout_toRightOf="@+id/lbl_education"
+        android:text="Dummy Education"
+        android:textSize="18sp" />
+
+
+    <Button
+        android:background="@color/colorAccent"
+        android:layout_below="@+id/txt_education"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Back" />
+
+    <ImageView
+        android:padding="10dp"
+        android:src="@drawable/download"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btn_back"
+        android:background="@drawable/bg2"
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
+
+</RelativeLayout>
